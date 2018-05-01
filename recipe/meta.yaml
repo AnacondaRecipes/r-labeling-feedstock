@@ -14,22 +14,15 @@ source:
     - {{ cran_mirror }}/src/contrib/Archive/labeling/labeling_{{ version }}.tar.gz
   sha256: 0d8069eb48e91f6f6d6a9148f4e2dc5026cabead15dd15fc343eff9cf33f538f
 
-
-  # patches:
-   # List any patch files here
-   # - fix.patch
-
 build:
   merge_build_host: True  # [win]
   # If this is a new build for the same version, increment the build number.
   number: 4
 
-
   # This is required to make R link correctly on Linux.
   rpaths:
     - lib/R/lib/
     - lib/
-
 
 requirements:
   build:
